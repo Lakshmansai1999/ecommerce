@@ -23,5 +23,8 @@ pipeline {
                 sudo systemctl restart gunicorn "' 
             }
         }
+        stage('Email Notification'){
+            mail bcc: '', body: 'content', cc: '', from: '', replyTo: '', subject: 'ecommerce', to: 'klakshmansai@stratapps.com'
+        }
     }
 }    
