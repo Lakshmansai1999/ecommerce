@@ -24,7 +24,9 @@ pipeline {
             }
         }
         stage('Email Notification'){
-            mail bcc: '', body: 'content', cc: '', from: '', replyTo: '', subject: 'ecommerce', to: 'klakshmansai@stratapps.com'
+            steps {
+             mail bcc: '', body: 'content', cc: '', from: '', replyTo: '', subject: 'ecommerce', to: 'klakshmansai@stratapps.com'
+            }
         }
     }
 }    
